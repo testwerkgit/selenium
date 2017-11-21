@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.phptravels.net/" />
+<title>BookingHotel</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">BookingHotel</td></tr>
+</thead><tbody>
+<!--Opent de Log In pagina.-->
+<tr>
+	<td>open</td>
+	<td>/login</td>
+	<td></td>
+</tr>
+<!--Voert de Gebruikersnaam in.-->
+<tr>
+	<td>type</td>
+	<td>name=username</td>
+	<td>jacques.villeneuve@email.net</td>
+</tr>
+<!--Voert het wachtwoord in.-->
+<tr>
+	<td>type</td>
+	<td>name=password</td>
+	<td>BAR123</td>
+</tr>
+<!--Drukt op de knop Login.-->
+<tr>
+	<td>click</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<!--Wacht tot het verwachtte Element zichtbaar is.-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=h3.RTL</td>
+	<td></td>
+</tr>
+<!--Controleert of het Element de welkomsttekst bevat.-->
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=h3.RTL</td>
+	<td>Hi, Jacques Villeneuve</td>
+</tr>
+<!--Druk op de link Hotels.-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Hotels</td>
+	<td></td>
+</tr>
+<!--Wacht to het Element geladen is op de pagina.-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='collapse1']/div/div/div[9]/div/ins</td>
+	<td></td>
+</tr>
+<!--Drukt op de radio button 5 sterren onder Star Grade.-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='collapse1']/div/div/div[9]/div/ins</td>
+	<td></td>
+</tr>
+<!--Controleert of de radio button 5 sterren is aangevinkt.-->
+<tr>
+	<td>verifyValue</td>
+	<td>id=5</td>
+	<td>on</td>
+</tr>
+<!--Drukt op Resort onder Property Types.-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='collapse3']/div/div[12]/div/ins</td>
+	<td></td>
+</tr>
+<!--Drukt op Night Club onder Amenities.-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='collapse4']/div/div[8]/div/ins</td>
+	<td></td>
+</tr>
+<!--Drukt op de Search knop.-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=searchform</td>
+	<td></td>
+</tr>
+<!--Drukt op het Hotel Jumeirah Beach Hotel.-->
+<tr>
+	<td>clickAndWait</td>
+	<td>//h4/a/b</td>
+	<td></td>
+</tr>
+<!--Selecteert 2 kamers uit het 3e blok ; Executive Two-Bedrooms Apartment.-->
+<tr>
+	<td>select</td>
+	<td>xpath=(//select[@name='roomscount'])[3]</td>
+	<td>label=2</td>
+</tr>
+<!--Drukt op de knop Book now.-->
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//button[@type='submit'])[3]</td>
+	<td></td>
+</tr>
+<!--Selecteert een fles champagne.-->
+<tr>
+	<td>click</td>
+	<td>id=2</td>
+	<td></td>
+</tr>
+<!--Controleert het eindbedrag.-->
+<tr>
+	<td>waitForTextPresent</td>
+	<td>339.90</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=displaytotal</td>
+	<td>339.90</td>
+</tr>
+<!--Drukt op de knop Confirm this booking.-->
+<tr>
+	<td>clickAndWait</td>
+	<td>name=logged</td>
+	<td></td>
+</tr>
+<!--Drukt op de knop Pay on Arrival.-->
+<tr>
+	<td>click</td>
+	<td>//center/button</td>
+	<td></td>
+</tr>
+<!--Drukt in de pop-up op Ok.-->
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure you want to pay at arrival?</td>
+	<td></td>
+</tr>
+<!--Controleert of de text Reserved wordt getoond.-->
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Reserved</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//center/b</td>
+	<td>Reserved</td>
+</tr>
+<!--Drukt op de pull down My Account.-->
+<tr>
+	<td>click</td>
+	<td>link=Jacques</td>
+	<td></td>
+</tr>
+<!--Drukt op de link Logout.-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>fbMainContainer</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=fbCloseButton</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

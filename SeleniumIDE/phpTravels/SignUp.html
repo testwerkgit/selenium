@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.phptravels.net/" />
+<title>SignUp</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">SignUp</td></tr>
+</thead><tbody>
+<!--Opent de SignUp pagina.-->
+<tr>
+	<td>open</td>
+	<td>/register</td>
+	<td></td>
+</tr>
+<!--Vult de voornaam in.-->
+<tr>
+	<td>type</td>
+	<td>name=firstname</td>
+	<td>Jacques</td>
+</tr>
+<!--Vult de achternaam in.-->
+<tr>
+	<td>type</td>
+	<td>name=lastname</td>
+	<td>Villeneuve</td>
+</tr>
+<!--Vult het telefoonnummer in.-->
+<tr>
+	<td>type</td>
+	<td>name=phone</td>
+	<td>0645466789</td>
+</tr>
+<!--Vult het emailadres in.-->
+<tr>
+	<td>type</td>
+	<td>name=email</td>
+	<td>jacques.villeneuve@email.net</td>
+</tr>
+<!--Vult het paswoord in.-->
+<tr>
+	<td>type</td>
+	<td>name=password</td>
+	<td>BAR123</td>
+</tr>
+<!--Vult de paswoord bevestiging in.-->
+<tr>
+	<td>type</td>
+	<td>name=confirmpassword</td>
+	<td>BAR123</td>
+</tr>
+<!--Drukt op de Sign Up knop.-->
+<tr>
+	<td>click</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<!--Wacht tot het gewenste element op de pagina zicchtbaar wordt.-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=h3.RTL</td>
+	<td></td>
+</tr>
+<!--Controleert of het element met de welkomst tekst zichtbaar is.-->
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=h3.RTL</td>
+	<td>Hi, Jacques Villeneuve</td>
+</tr>
+<!--Selecteer de pull down My Account.-->
+<tr>
+	<td>click</td>
+	<td>css=b.lightcaret.mt-2</td>
+	<td></td>
+</tr>
+<!--Drukt op de optie Logout.-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://the-internet.herokuapp.com/" />
+<title>Checkboxes</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Checkboxes</td></tr>
+</thead><tbody>
+<!--Opent de startpagina. (the-internet.herokuapp.com)-->
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<!--Drukt op de link Checkboxes en wacht tot de pagina geladen is (belangrijk om een wait in te bouwen bij het laden van pagina's).-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Checkboxes</td>
+	<td></td>
+</tr>
+<!--Controleert of checkbox 2 is aangevinkt (assertChecked).-->
+<tr>
+	<td>assertChecked</td>
+	<td>xpath=(//input[@type='checkbox'])[2]</td>
+	<td></td>
+</tr>
+<!--Controleert of checkbox 1 niet is aangevinkt (assertNotChecked).-->
+<tr>
+	<td>assertNotChecked</td>
+	<td>css=input[type=&quot;checkbox&quot;]</td>
+	<td></td>
+</tr>
+<!--Vinkt checkbox 1 aan.-->
+<tr>
+	<td>click</td>
+	<td>css=input[type=&quot;checkbox&quot;]</td>
+	<td></td>
+</tr>
+<!--Controleert og checkbox 1 is aangevinkt. Verschil tussen verify en assert is dat een verify het script door laat lopen als er een verschil wordt geconstateerd. Assert stop het script.-->
+<tr>
+	<td>verifyChecked</td>
+	<td>css=input[type=&quot;checkbox&quot;]</td>
+	<td></td>
+</tr>
+<!--Controleert of checkbox 2 niet is aangevinkt, dat is hij wel dus deze zal falen maar het script loopt door (verify).-->
+<tr>
+	<td>verifyNotChecked</td>
+	<td>xpath=(//input[@type='checkbox'])[2]</td>
+	<td></td>
+</tr>
+<!--Vinkt checkbox 1 uit.-->
+<tr>
+	<td>click</td>
+	<td>css=input[type=&quot;checkbox&quot;]</td>
+	<td></td>
+</tr>
+<!--Vinkt checkbox 2 uit.-->
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@type='checkbox'])[2]</td>
+	<td></td>
+</tr>
+<!--Controleert of checkbox 1 uitgevinkt is via een verify.-->
+<tr>
+	<td>verifyNotChecked</td>
+	<td>css=input[type=&quot;checkbox&quot;]</td>
+	<td></td>
+</tr>
+<!--Controleert of checkbox 2 uitgevinkt is via een assert.-->
+<tr>
+	<td>assertNotChecked</td>
+	<td>xpath=(//input[@type='checkbox'])[2]</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

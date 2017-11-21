@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://the-internet.herokuapp.com/" />
+<title>HorizontalSlider</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">HorizontalSlider</td></tr>
+</thead><tbody>
+<!--Opent de startpagina. (the-internet.herokuapp.com)-->
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<!--Drukt op de link Horizontal Slider.-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Horizontal Slider</td>
+	<td></td>
+</tr>
+<!--Zet de slider waarde op 0.5.-->
+<tr>
+	<td>type</td>
+	<td>css=input[type=&quot;range&quot;]</td>
+	<td>0.5</td>
+</tr>
+<!--Controleert of de waarde naast de slider op 0.5 staat.-->
+<tr>
+	<td>assertText</td>
+	<td>id=range</td>
+	<td>0.5</td>
+</tr>
+<!--Controleert of de slider op range 0.5 staat.-->
+<tr>
+	<td>verifyValue</td>
+	<td>css=input[type=&quot;range&quot;]</td>
+	<td>0.5</td>
+</tr>
+<!--Zet de slider waarde op 2.5.-->
+<tr>
+	<td>type</td>
+	<td>css=input[type=&quot;range&quot;]</td>
+	<td>2.5</td>
+</tr>
+<!--Controleert of de waarde naast de slider op 2.5 staat.-->
+<tr>
+	<td>assertText</td>
+	<td>id=range</td>
+	<td>2.5</td>
+</tr>
+<!--Controleert of de slider op range 2.5 staat.-->
+<tr>
+	<td>verifyValue</td>
+	<td>css=input[type=&quot;range&quot;]</td>
+	<td>2.5</td>
+</tr>
+<!--Zet de slider waarde op 5.-->
+<tr>
+	<td>type</td>
+	<td>css=input[type=&quot;range&quot;]</td>
+	<td>5</td>
+</tr>
+<!--Controleert of de waarde naast de slider op 5 staat.-->
+<tr>
+	<td>assertText</td>
+	<td>id=range</td>
+	<td>5</td>
+</tr>
+<!--Controleert of de slider op range 5 staat.-->
+<tr>
+	<td>verifyValue</td>
+	<td>css=input[type=&quot;range&quot;]</td>
+	<td>5</td>
+</tr>
+<!--Controleert of de waarde naast de slider op 6 staat. Waarde = 5 dus hij zal falen.-->
+<tr>
+	<td>verifyText</td>
+	<td>id=range</td>
+	<td>6</td>
+</tr>
+<!--Controleert of de slider op range 6 staat, hij staat op 5 dus deze test zal falen..-->
+<tr>
+	<td>verifyValue</td>
+	<td>css=input[type=&quot;range&quot;]</td>
+	<td>6</td>
+</tr>
+</tbody></table>
+</body>
+</html>

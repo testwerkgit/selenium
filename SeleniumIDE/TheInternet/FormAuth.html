@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://the-internet.herokuapp.com/" />
+<title>FormAuth</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">FormAuth</td></tr>
+</thead><tbody>
+<!--Opent de startpagina. (the-internet.herokuapp.com)-->
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<!--Drukt op de link Form Authentication en wacht tot de pagina geladen is.-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Form Authentication</td>
+	<td></td>
+</tr>
+<!--Voert username "tomsmith" in.-->
+<tr>
+	<td>type</td>
+	<td>id=username</td>
+	<td>tomsmith</td>
+</tr>
+<!--Voert password "SuperSecretPassword!" in.-->
+<tr>
+	<td>type</td>
+	<td>id=password</td>
+	<td>SuperSecretPassword!</td>
+</tr>
+<!--Drukt op de knop Login en wacht tot de pagina geladen is.-->
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.radius</td>
+	<td></td>
+</tr>
+<!--Controleert of de tekst wordt getoond die hoor bij een succesvolle login in de groene balk. Let op: Hier zit een × achter.-->
+<tr>
+	<td>assertText</td>
+	<td>id=flash</td>
+	<td>You logged into a secure area! ×</td>
+</tr>
+<!--Drukt op de knop Logout.-->
+<tr>
+	<td>clickAndWait</td>
+	<td>css=i.icon-2x.icon-signout</td>
+	<td></td>
+</tr>
+<!--Controleert of de tekst wordt getoond die hoort bij een succesvolle logout. Ook hier weer de × achteraan.-->
+<tr>
+	<td>assertText</td>
+	<td>id=flash</td>
+	<td>You logged out of the secure area! ×</td>
+</tr>
+<!--Voert een niet bestaande username in.-->
+<tr>
+	<td>type</td>
+	<td>id=username</td>
+	<td>petersmith</td>
+</tr>
+<!--Voert een bestaand wachtwoord in.-->
+<tr>
+	<td>type</td>
+	<td>id=password</td>
+	<td>SuperSecretPassword!</td>
+</tr>
+<!--Drukt op Login en wacht tot de pagina geladen is.-->
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.radius</td>
+	<td></td>
+</tr>
+<!--Controleert of de juiste melding wordt getoond bij een incorrecte username.-->
+<tr>
+	<td>assertText</td>
+	<td>id=flash</td>
+	<td>Your username is invalid! ×</td>
+</tr>
+<!--Voert een bestaande username in.-->
+<tr>
+	<td>type</td>
+	<td>id=username</td>
+	<td>tomsmith</td>
+</tr>
+<!--Voert een niet bestaand password in.-->
+<tr>
+	<td>type</td>
+	<td>id=password</td>
+	<td>password</td>
+</tr>
+<!--Drukt op Login en wach tot de pagina geladen is.-->
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.radius</td>
+	<td></td>
+</tr>
+<!--Controleert de melding bij een incorrect password.-->
+<tr>
+	<td>assertText</td>
+	<td>id=flash</td>
+	<td>Your password is invalid! ×</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

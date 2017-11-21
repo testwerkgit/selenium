@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://the-internet.herokuapp.com/" />
+<title>DropDown</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">DropDown</td></tr>
+</thead><tbody>
+<!--Opent de startpagina.-->
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<!--Drukt op de link Dropdown-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Dropdown</td>
+	<td></td>
+</tr>
+<!--Selecteert uit de dropdown lijst Option 1.-->
+<tr>
+	<td>select</td>
+	<td>id=dropdown</td>
+	<td>label=Option 1</td>
+</tr>
+<!--Controleert of de dropdown Option 1 als waarde heeft geselecteerd.-->
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=dropdown</td>
+	<td>Option 1</td>
+</tr>
+<!--Selecteert uit de dropdown lijst Option 2.-->
+<tr>
+	<td>select</td>
+	<td>id=dropdown</td>
+	<td>label=Option 2</td>
+</tr>
+<!--Controleert of de dropdown Option 2 als waarde heeft geselecteerd.-->
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=dropdown</td>
+	<td>Option 2</td>
+</tr>
+<!--Controleert of de dropdown Option 1 heeft geselecteerd, maar dat is niet zo. Deze check zal falen, het script loopt eventueel wel door.-->
+<tr>
+	<td>verifySelectedLabel</td>
+	<td>id=dropdown</td>
+	<td>Option 1</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

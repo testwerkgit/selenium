@@ -1,0 +1,59 @@
+BDPreconditie.
+- Download FireFox ESR 52 (FF nieuwer dan 55 ondersteund geen SeleniumIDE. De Extended Support Releases van FF worden niet automatisch geupdatet naar nieuwere versies).
+- Zoek en installeer de Selenium IDE plug-in.
+
+Stappen:
+Open de FireFox browser en start de Selenium IDE plug-in.
+=> Menu openen > Ontwikkelaar > Selenium IDE.
+In de Selenium IDE applicatie:
+=> Bestand > Open test suite : \Dropbox\Testwerk openbaar\Selenium\SeleniumIDE\phpTravels
+Alle testcases in de suite worden nu automatisch ingeladen.
+U kunt beginnen.
+
+Scenario beschrijving.
+
+SignUp:
+Gaat naar de website: http://www.phptravels.net/
+Drukt op de knop Register.
+Voert een voornaam in.
+Voert een achternaam in.
+Voert een telefoonnummer in.
+Vult een emailadres in.
+Voert een wachtwoord in.
+Voort een bevestigingswachtwoord in.
+Drukt op de knop Submit.
+Controleert of de text "Hi, <voornaam><achternaam>" wordt getoond.
+Clickt op Account en dan op Logout.
+
+LogIn:
+Gaat naar de website: http://www.phptravels.net/
+Drukt op de knop Login.
+Voert het emailadres in.
+Voert het wachtwoord in.
+Drukt op de knop Submit.
+Controleert of de text "Hi, <voornaam><achternaam>" wordt getoond.
+Clickt op Account en dan op Logout.
+
+BookingHotel:
+Gaat naar de website: http://www.phptravels.net/
+Drukt op de knop Login.
+Voert het emailadres in.
+Voert het wachtwoord in.
+Drukt op de knop Submit.
+Controleert of de text "Hi, <voornaam><achternaam>" wordt getoond.
+Drukt op Hotel en wacht (op het laden van de pagina).
+Wacht tot het element om Star grade: 5 sterren in te voeren geladen is.
+Drukt op het element Star Grade: 5 sterren.
+Drukt op het element Property type: Resort.
+Drukt op het element Ameneties: Night Club.
+Druk op de Search knop en wacht tot de pagina geladen is.
+Selecteert het hotel: Jumeirah Beach Hotel. (het Hotel in het eerste getoonde blok)
+Selecteert 2 kamers uit het 3e blok ; Executive Two-Bedrooms Apartment.
+Drukt op de knop Book now en wacht tot de pagina geladen is.
+Selecteert een fles Champagne.
+Controleert de totaal prijs op de pagina.
+Drukt op de knop Confirm this booking.
+Drukt op de knop Pay on arrival.
+Controleert op de melding Reserved wordt getoond.
+Drukt op Account en dan op Logout.
+

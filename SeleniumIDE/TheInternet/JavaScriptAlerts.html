@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://the-internet.herokuapp.com/" />
+<title>JavaScriptAlerts</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">JavaScriptAlerts</td></tr>
+</thead><tbody>
+<!--Opent de startpagina. (the-internet.herokuapp.com)-->
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<!--Drukt op de link JavaScripts Alerts en wacht tot de pagina geladen is.-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=JavaScript Alerts</td>
+	<td></td>
+</tr>
+<!--Voert de opgegeven waarde in zodra de prompt wordt getoond.-->
+<tr>
+	<td>answerOnNextPrompt</td>
+	<td>TestWerk</td>
+	<td></td>
+</tr>
+<!--Drukt op de knop Click for JS Prompt.-->
+<tr>
+	<td>click</td>
+	<td>//button[@onclick='jsPrompt()']</td>
+	<td></td>
+</tr>
+<!--Controleert of de prompt I am a JS prompt wordt getoond.-->
+<tr>
+	<td>assertPrompt</td>
+	<td>I am a JS prompt</td>
+	<td></td>
+</tr>
+<!--Controleert de tekst onder Result.-->
+<tr>
+	<td>assertText</td>
+	<td>id=result</td>
+	<td>You entered: TestWerk</td>
+</tr>
+<!--Drukt op de knop Click for JS Alert.-->
+<tr>
+	<td>click</td>
+	<td>css=button</td>
+	<td></td>
+</tr>
+<!--Controleert of de JS alert "I am a JS Alert" wordt getoond.-->
+<tr>
+	<td>assertAlert</td>
+	<td>I am a JS Alert</td>
+	<td></td>
+</tr>
+<!--Controleert de tekst onder Result.-->
+<tr>
+	<td>assertText</td>
+	<td>id=result</td>
+	<td>You successfuly clicked an alert</td>
+</tr>
+<!--Drukt op de knop Click for JS Confirm.-->
+<tr>
+	<td>click</td>
+	<td>//button[@onclick='jsConfirm()']</td>
+	<td></td>
+</tr>
+<!--Controleert of de JS Confirm "I am a JS Confirm" wordt getoond.-->
+<tr>
+	<td>assertConfirmation</td>
+	<td>I am a JS Confirm</td>
+	<td></td>
+</tr>
+<!--Controleert de tekst onder Result.-->
+<tr>
+	<td>assertText</td>
+	<td>id=result</td>
+	<td>You clicked: Ok</td>
+</tr>
+</tbody></table>
+</body>
+</html>

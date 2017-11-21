@@ -1,0 +1,91 @@
+Preconditie.
+- Download FireFox.
+- Zoek en installeer de Selenium IDE plug-in.
+
+Stappen:
+Open de FireFox browser en start de Selenium IDE plug-in.
+=> Menu openen > Ontwikkelaar > Selenium IDE.
+In de Selenium IDE applicatie:
+=> Bestand > Open test suite : \Dropbox\Testwerk openbaar\Selenium\SeleniumIDE\TheInternet
+Alle testcases in de suite worden nu automatisch ingeladen.
+U kunt beginnen.
+
+Scenario's.
+
+Checkboxes - werkt 10-07-2017
+1. Open de base URL - http://the-internet.herokuapp.com/
+2. Klikt op de link Checkboxes en wacht tot de pagina geladen is.
+Preconditie: Checkbox 2 is default aangevinkt, Checkbox 1 is default uitgevinkt.
+3. Controleert of checkbox 2 is aangevinkt middels assertChecked via Xpath van checkbox 2.
+4. Controleert of checkbox 1 is uitgevinkt middels assertNotChecked via de Css van checkbox 1.
+5. Vink checkbox 1 aan.
+6. Controleert of checkbox 1 is aangevinkt middels een verifyChecked. Verschil tussen verify en assert is dat als een verify faalt het script doorloopt, bij het falen van een assert dan stopt het script.
+7. Controleert of checkbox 2 is uitgevinkt middels een verifyNotChecked. Deze zal falen want hij is wel aangevinkt. Controleer dit visueel (rode regel) maar controleer ook de log in de seleium console.
+8. Vinkt checkbox 1 uit.
+9. Vinkt checkbox 2 uit.
+10. Controleert of checkbox 1 uitgevinkt is via een verify.
+11. Controleert of checkbox 2 uitgevinkt is via een assert.
+
+
+Drag and drop - werkt niet 10-07-2017 - sinds firefox 50 zou het niet meer werken? Regels worden wel groen, maar geen acties uitgevoerd. (Thim Haalboom)
+1. Open de base URL - http://the-internet.herokuapp.com/
+2. Drukt op de link Drag and Drop en wacht tot de pagina geladen is.
+3. Zet blok B op de plek van blok A middels dragAndDropToObject.
+4. Verplaatst blok A naar de locatie van blok B (adhv pixels x en y coordinaten).
+
+Drop Down - werkt 10-07-2017
+1. Open de base URL - http://the-internet.herokuapp.com/
+2. Drukt op de link Dropdown en wacht tot de pagina geladen is.
+3. Selecteert uit de dropdown lijst Option 1.
+4. Controleert of Option 1 geselecteerd in in de Dropdown.
+5. Controleert of de dropdown Option 1 heeft geselecteerd, maar dat is niet zo. Deze check zal falen, het script loopt eventueel wel door. (laatste stap in dit script)
+
+Horizontal slider - werkt 10-07-2017
+1. Open de base URL - http://the-internet.herokuapp.com/
+2. Drukt op de link Horizontal Slider en wacht tot de pagina geladen is.
+3. Zet de slider waarde op 0.5.
+4. Controleert of de waarde naast de slider op 0.5 staat.
+5. Controleert of de slider op range 0.5 staat.
+6. Zet de slider waarde op 2.5.
+7. Controleert of de waarde naast de slider op 2.5 staat.
+8. Controleert of de slider op range 2.5 staat.
+9. Zet de slider waarde op 5.
+10. Controleert of de waarde naast de slider op 5 staat.
+11. Controleert of de slider op range 5 staat.
+12. Controleert of de waarde naast de slider op 6 staat. Waarde = 5 dus hij zal falen.
+13. Controleert of de slider op range 6 staat, hij staat op 5 dus deze test zal falen.
+
+FormAuth - werkt 10-07-2017
+1. Open de base URL - http://the-internet.herokuapp.com/
+2. Drukt op de link Form Authentication en wacht tot de pagina geladen is.
+3. Voert username "tomsmith" in.
+4. Voert password "SuperSecretPassword!" in.
+5. Drukt op de knop Login en wacht tot de pagina geladen is.
+6. Controleert of de tekst wordt getoond die hoor bij een succesvolle login in de groene balk. Let op: Hier zit een × achter.
+7. Drukt op de knop Logout.
+8. Controleert of de tekst wordt getoond die hoort bij een succesvolle logout. Ook hier weer de × achteraan.
+9. Voert een niet bestaande username in.
+10. Voert een bestaand wachtwoord in.
+11. Drukt op Login en wacht tot de pagina geladen is.
+12. Controleert of de juiste melding wordt getoond bij een incorrecte username.
+13. Voert een bestaande username in.
+14. Voert een niet bestaand password in.
+15. Drukt op Login en wach tot de pagina geladen is.
+16. Controleert de melding bij een incorrect password.
+
+JavaScriptAlerts - werk 10-07-2017
+1. Open de base URL - http://the-internet.herokuapp.com/
+2. Drukt op de link JavaScripts Alerts en wacht tot de pagina geladen is.
+3. Voert de opgegeven waarde in zodra de prompt wordt getoond. (TestWerk)
+4. Drukt op de knop Click for JS Prompt.
+5. Controleert of de prompt "I am a JS prompt" wordt getoond.
+6. Controleert de tekst onder Result.
+7. Drukt op de knop Click for JS Alert.
+8. Controleert of de JS alert "I am a JS Alert" wordt getoond.
+9. Controleert de tekst onder Result.
+10. Drukt op de knop Click for JS Confirm.
+11. Controleert of de JS Confirm "I am a JS Confirm" wordt getoond.
+12. Controleert de tekst onder Result.
+
+Hover - werkt niet 10-07-2017
+Onduidelijk hoe dit zou moeten werken.
